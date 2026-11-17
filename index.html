@@ -1,405 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Taiwo Iwaloga — multidisciplinary business development professional working across sales, technology, AI, operations and entrepreneurship.">
-<title>Taiwo Iwaloga | Business Development & Digital Innovation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#fafaf7;--white:#fff;--ink:#20231f;--muted:#777c74;
-  --line:#e7e8e1;--sage:#788875;--sage-dark:#596b58;--sage-pale:#edf0e9;
-  --serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;
-  --max:1180px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:88px}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
-.wrap{width:min(var(--max),calc(100% - 64px));margin:auto}
-.eyebrow{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-dark)}
-h1,h2,h3,p{margin-top:0}
-h1,h2,.serif{font-family:var(--serif);font-weight:400}
-h2{font-size:clamp(30px,3vw,43px);line-height:1.16;letter-spacing:-.035em;margin:12px 0 0}
-p{line-height:1.75}
-header{height:78px;position:sticky;top:0;z-index:20;background:rgba(250,250,247,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(231,232,225,.8)}
-.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:11px;min-width:190px}
-.brand-mark{width:31px;height:31px;border:2px solid var(--sage);display:grid;place-items:center;transform:rotate(45deg);border-radius:7px;color:var(--sage-dark);font-weight:700;font-size:14px}
-.brand-mark span{transform:rotate(-45deg)}
-.brand-name{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.5}
-.brand-name small{display:block;font-size:8px;letter-spacing:.19em;color:var(--muted);font-weight:600}
-.navlinks{display:flex;align-items:center;gap:30px}
-.navlinks a{font-size:10px;text-transform:uppercase;letter-spacing:.09em;font-weight:700;color:#666b64}
-.navlinks a:hover{color:var(--sage-dark)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:15px;padding:14px 20px;background:var(--sage);color:white;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--sage);transition:.2s}
-.btn:hover{background:var(--sage-dark);border-color:var(--sage-dark)}
-.btn.outline{background:transparent;color:var(--ink);border-color:#cfd3ca}
-.btn.outline:hover{background:var(--sage-pale);border-color:var(--sage)}
-.menu-toggle{display:none;background:none;border:1px solid var(--line);padding:9px 11px;color:var(--ink)}
-.hero{padding:72px 0 64px}
-.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:55px;align-items:center}
-.hero-copy{padding:10px 0 10px 38px;position:relative}
-.hero-copy:before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--line)}
-.hero h1{font-size:clamp(43px,5vw,66px);line-height:1.08;letter-spacing:-.045em;margin:19px 0 20px;max-width:590px}
-.hero h1 em{font-style:normal;color:var(--sage-dark)}
-.hero-copy>p:not(.eyebrow){font-size:14px;color:var(--muted);max-width:490px;margin-bottom:27px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
-.hero-note{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:32px;padding-top:17px;border-top:1px solid var(--line)}
-.hero-visual{height:440px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--sage-pale)}
-.hero-visual:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:#dfe5da;left:10%;top:12%}
-.hero-visual:after{content:"";position:absolute;inset:24px;border:1px solid rgba(120,136,117,.22);pointer-events:none}
-.portrait-placeholder{position:relative;z-index:2;width:78%;height:90%;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--sage-dark)}
-.portrait-placeholder .monogram{font-family:var(--serif);font-size:clamp(90px,14vw,170px);line-height:1;color:rgba(89,107,88,.3)}
-.portrait-placeholder .replace{position:absolute;bottom:22px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.hero-visual img{position:absolute;z-index:2;width:100%;height:100%;object-fit:cover;object-position:center 25%;display:none}
-.hero-visual.has-photo img{display:block}
-.hero-visual.has-photo .portrait-placeholder{display:none}
-.visual-label{position:absolute;z-index:3;right:22px;top:20px;font-size:8px;line-height:1.7;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-dark);text-align:right}
-.section{padding:76px 0}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}
-.section-head p{max-width:420px;color:var(--muted);font-size:12px;margin:0}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.project{border:1px solid var(--line);background:var(--white);overflow:hidden;transition:transform .25s,border-color .25s}
-.project:hover{transform:translateY(-4px);border-color:#c4cdbf}
-.project-art{height:190px;padding:24px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.project-art.manna{background:#e9eee6}.project-art.total{background:#222923;color:#f7f7f2}.project-art.ai{background:#eeeee9}
-.project-art:after{content:"";position:absolute;width:175px;height:175px;border:1px solid currentColor;opacity:.15;transform:rotate(35deg);right:12px;top:15px}
-.art-title{font-family:var(--serif);font-size:28px;line-height:1.08;max-width:220px;position:relative;z-index:1}
-.art-caption{position:absolute;left:24px;bottom:18px;font-size:8px;letter-spacing:.16em;text-transform:uppercase;opacity:.65}
-.project-info{padding:17px 19px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.project-info h3{font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 5px}
-.project-info p{font-size:10px;color:var(--muted);margin:0}
-.arrow{font-size:20px;color:var(--sage)}
-.services{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:28px}
-.service{padding:25px 20px 25px 0;margin-right:20px;border-right:1px solid var(--line)}
-.service:last-child{border:0;margin:0}
-.service-icon{width:34px;height:34px;border-radius:50%;background:var(--sage);color:white;display:grid;place-items:center;font-size:14px;margin-bottom:14px}
-.service h3{font-size:13px;margin:0 0 8px}
-.service p{font-size:10px;line-height:1.65;color:var(--muted);margin:0}
-.band{background:var(--sage-pale);padding:34px 0}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
-.stat{padding:4px 15px;border-right:1px solid #d9ded5}
-.stat:last-child{border:0}
-.stat strong{display:block;font-family:var(--serif);font-size:28px;font-weight:400;margin:7px 0 3px}
-.stat span{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
-.experience-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}
-.experience-intro p{font-size:13px;color:var(--muted);max-width:340px;margin-top:18px}
-.timeline{border-top:1px solid var(--line)}
-.role{display:grid;grid-template-columns:90px 1fr;gap:20px;padding:19px 0;border-bottom:1px solid var(--line)}
-.role-date{font-size:9px;color:var(--sage-dark);letter-spacing:.1em;text-transform:uppercase;padding-top:4px}
-.role h3{font-family:var(--serif);font-size:19px;font-weight:400;margin:0 0 4px}
-.role p{font-size:11px;color:var(--muted);margin:0}
-.capabilities{background:var(--sage-pale)}
-.cap-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:30px}
-.cap h3{font-size:11px;text-transform:uppercase;letter-spacing:.09em;margin-bottom:13px}
-.cap ul{list-style:none;padding:0;margin:0}
-.cap li{font-size:11px;color:var(--muted);padding:8px 0;border-bottom:1px solid #dce1d8}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;margin-top:32px}
-.step{position:relative;border-top:1px solid var(--line);padding-top:18px}
-.step-num{font-family:var(--serif);font-size:25px;color:var(--sage)}
-.step h3{font-size:12px;margin:9px 0 6px}
-.step p{font-size:10px;color:var(--muted);margin:0}
-.quote-band{background:#f0f1ec;padding:46px 0}
-.quote-layout{display:grid;grid-template-columns:.7fr 1.3fr;align-items:center;gap:50px}
-.quote-layout h2{font-size:30px}
-.quote{font-family:var(--serif);font-size:clamp(22px,3vw,32px);line-height:1.35;max-width:760px}
-.quote small{display:block;font:600 9px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dark);margin-top:18px}
-.contact-panel{padding:48px;background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:1fr 1.2fr;gap:35px;align-items:center}
-.contact-panel h2{font-size:32px}
-.contact-panel p{font-size:12px;color:var(--muted);max-width:370px}
-.contact-details{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.contact-item span{display:block;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.contact-item a,.contact-item strong{font-size:11px;font-weight:600;overflow-wrap:anywhere}
-footer{padding:35px 0 25px}
-.read-aloud{position:fixed;right:22px;bottom:22px;z-index:50;display:flex;align-items:center;gap:8px;padding:9px;background:rgba(255,255,255,.96);border:1px solid var(--line);box-shadow:0 8px 28px rgba(32,35,31,.10);backdrop-filter:blur(12px)}
-.read-aloud button{border:0;padding:10px 13px;background:var(--sage);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;cursor:pointer}
-.read-aloud button.secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.read-aloud button:focus-visible{outline:2px solid var(--sage-dark);outline-offset:3px}
-.read-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px;padding-bottom:28px;border-bottom:1px solid var(--line)}
-.footer-col h4{font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 13px}
-.footer-col a,.footer-col p{display:block;font-size:10px;color:var(--muted);margin:7px 0}
-.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:18px;font-size:9px;color:var(--muted)}
-.mobile-nav{display:none}
-@media(max-width:900px){
- .wrap{width:min(100% - 42px,var(--max))}.navlinks{gap:16px}.navlinks a{font-size:9px}
- .hero-grid{gap:30px}.hero-copy{padding-left:22px}.hero-visual{height:390px}
- .projects{gap:12px}.project-art{height:160px}.services{grid-template-columns:repeat(2,1fr)}
- .service:nth-child(2){border-right:0}.service:nth-child(n+3){border-top:1px solid var(--line)}
- .experience-grid{gap:35px}.cap-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:680px){
- .wrap{width:calc(100% - 38px)}header{height:68px}.brand{min-width:0}.navlinks,.nav>.btn{display:none}.menu-toggle{display:block}
- .mobile-nav{position:absolute;top:68px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 20px 20px;display:none}
- .mobile-nav.open{display:grid;gap:0}.mobile-nav a{padding:12px 0;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
- .hero{padding:40px 0 45px}.hero-grid{grid-template-columns:1fr;gap:28px}.hero-copy{padding-left:18px}.hero h1{font-size:45px}
- .hero-visual{height:350px;order:-1}.hero-note{margin-top:23px}
- .section{padding:54px 0}.section-head{display:block}.section-head p{margin-top:12px}
- .projects{grid-template-columns:1fr}.project-art{height:185px}
- .services{grid-template-columns:1fr 1fr}.service{padding:20px 12px 20px 0;margin-right:12px}
- .stats{grid-template-columns:repeat(2,1fr);row-gap:22px}.stat:nth-child(2){border:0}
- .experience-grid{grid-template-columns:1fr;gap:28px}.role{grid-template-columns:65px 1fr;gap:12px}
- .cap-grid{grid-template-columns:1fr 1fr;gap:20px}.process{grid-template-columns:1fr 1fr;gap:22px}
- .quote-layout{grid-template-columns:1fr;gap:15px}.quote-layout h2{font-size:25px}
- .contact-panel{padding:26px 22px;grid-template-columns:1fr;gap:24px}.contact-details{gap:18px}
- .footer-top{grid-template-columns:1fr 1fr;gap:25px}.footer-brand{grid-column:1/-1}
- .footer-bottom{display:block;line-height:1.8}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Taiwo Iwaloga, Business Administrator working across procurement, business development, sales, operations, virtual assistance and AI solutions.">
+  <meta name="theme-color" content="#f7f8f4">
+  <title>Taiwo Iwaloga | Business Administrator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f7f8f4;
+      --surface: #ffffff;
+      --ink: #20251f;
+      --muted: #687168;
+      --line: #e2e7df;
+      --sage: #758875;
+      --sage-dark: #4f6652;
+      --sage-pale: #eaf0e8;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --max: 1160px;
+      --shadow: 0 18px 50px rgba(31, 43, 32, .07);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(var(--max), calc(100% - 56px)); margin-inline: auto; }
+    .eyebrow { margin: 0 0 13px; color: var(--sage-dark); font-size: 11px; font-weight: 700; letter-spacing: .15em; line-height: 1.5; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, .serif { font-family: var(--serif); font-weight: 400; }
+    h1 { margin-bottom: 20px; font-size: clamp(42px, 5.3vw, 68px); line-height: 1.04; letter-spacing: -.045em; }
+    h1 em { color: var(--sage-dark); font-style: normal; }
+    h2 { margin-bottom: 0; font-size: clamp(32px, 3.7vw, 46px); line-height: 1.13; letter-spacing: -.035em; }
+    h3 { line-height: 1.3; }
+    p { color: var(--muted); font-size: 15px; line-height: 1.78; }
+    .btn { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 14px; padding: 0 19px; border: 1px solid var(--sage-dark); background: var(--sage-dark); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .015em; transition: transform .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-2px); background: #405643; }
+    .btn.outline { background: transparent; color: var(--ink); border-color: var(--line); }
+    .btn.outline:hover { border-color: var(--sage-dark); background: var(--sage-pale); }
+    .text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--sage-dark); font-size: 12px; font-weight: 700; }
+    .text-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+    /* Header */
+    .site-header { position: sticky; top: 0; z-index: 30; height: 78px; border-bottom: 1px solid rgba(226,231,223,.9); background: rgba(247,248,244,.94); backdrop-filter: blur(14px); }
+    .nav { display: flex; height: 100%; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; border: 1.5px solid var(--sage); border-radius: 50%; color: var(--sage-dark); font-family: var(--serif); font-size: 17px; }
+    .brand-name { font-size: 11px; font-weight: 700; letter-spacing: .13em; line-height: 1.5; text-transform: uppercase; }
+    .brand-name small { display: block; color: var(--muted); font-size: 9px; font-weight: 500; letter-spacing: .11em; }
+    .nav-links { display: flex; align-items: center; gap: clamp(14px, 2.2vw, 27px); }
+    .nav-links a { color: #586158; font-size: 11px; font-weight: 700; }
+    .nav-links a:hover { color: var(--sage-dark); }
+    .nav-cta { min-height: 40px; padding-inline: 15px; font-size: 11px; }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: transparent; width: 42px; height: 42px; color: var(--ink); cursor: pointer; }
+    .mobile-nav { display: none; }
+
+    /* Hero */
+    .hero { padding: 76px 0 78px; }
+    .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; align-items: center; gap: clamp(42px, 7vw, 94px); }
+    .hero-copy { max-width: 660px; }
+    .hero-copy .lead { max-width: 610px; margin-bottom: 25px; font-size: 16px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 9px 17px; margin-top: 29px; color: var(--muted); font-size: 11px; }
+    .hero-tags span::before { content: "•"; margin-right: 8px; color: var(--sage); }
+    .portrait-frame { position: relative; min-height: 475px; overflow: hidden; background: #e5e8e2; box-shadow: var(--shadow); }
+    .portrait-frame::after { position: absolute; inset: 0; border: 1px solid rgba(255,255,255,.35); content: ""; pointer-events: none; }
+    .portrait-frame img { width: 100%; height: 475px; object-fit: cover; object-position: center 34%; filter: grayscale(100%); }
+    .portrait-caption { position: absolute; left: 50%; bottom: 14px; right: auto; transform: translateX(-50%); z-index: 1; width: max-content; max-width: calc(100% - 28px); padding: 9px 12px; background: rgba(247,248,244,.48); backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); color: var(--ink); font-size: 9px; font-weight: 700; letter-spacing: .09em; line-height: 1.55; text-align: center; text-transform: uppercase; }
+
+    /* General sections */
+    .section { padding: 84px 0; }
+    .section-white { background: var(--surface); }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 36px; margin-bottom: 36px; }
+    .section-head > div { max-width: 650px; }
+    .section-head > p { max-width: 360px; margin: 0 0 4px; font-size: 14px; }
+    .about-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 70px; align-items: start; }
+    .about-copy p { max-width: 520px; }
+    .about-quote { margin: 28px 0 0; padding: 22px 0 0 22px; border-left: 2px solid var(--sage); color: var(--ink); font-family: var(--serif); font-size: 22px; line-height: 1.45; }
+    .focus-list { border-top: 1px solid var(--line); }
+    .focus-item { display: grid; grid-template-columns: 44px 1fr; gap: 17px; padding: 21px 0; border-bottom: 1px solid var(--line); }
+    .focus-number { color: var(--sage); font-family: var(--serif); font-size: 23px; }
+    .focus-item h3 { margin: 0 0 5px; font-size: 15px; }
+    .focus-item p { margin: 0; font-size: 13px; }
+
+    /* Capabilities */
+    .capability-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 38px; }
+    .capability-card { min-height: 220px; padding: 27px 28px; border: 1px solid var(--line); background: var(--surface); transition: transform .2s ease, box-shadow .2s ease; }
+    .capability-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .card-index { display: inline-grid; width: 31px; height: 31px; place-items: center; margin-bottom: 19px; border-radius: 50%; background: var(--sage-pale); color: var(--sage-dark); font-family: var(--serif); font-size: 15px; }
+    .capability-card h3 { margin: 0 0 9px; font-size: 17px; }
+    .capability-card p { margin: 0; font-size: 13px; }
+    .capability-card .skill-line { margin-top: 14px; color: var(--sage-dark); font-size: 11px; font-weight: 600; line-height: 1.8; }
+
+    /* Selected work */
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .project-card { display: flex; min-height: 100%; flex-direction: column; border: 1px solid var(--line); background: var(--surface); }
+    .project-visual { position: relative; display: flex; min-height: 210px; align-items: end; overflow: hidden; padding: 24px; background: var(--sage-pale); }
+    .project-visual .project-shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; opacity: .94; transition: transform .35s ease; }
+    .project-card:hover .project-shot { transform: scale(1.025); }
+    .project-visual::after { z-index: 1; background: linear-gradient(180deg, transparent 38%, rgba(20,28,22,.68)); border: 0; border-radius: 0; width: 100%; height: 100%; top: 0; right: 0; }
+    .project-kicker { z-index: 2; padding: 7px 10px; background: rgba(255,255,255,.92); }
+    .project-visual::before, .project-visual::after { position: absolute; border: 1px solid rgba(79,102,82,.19); border-radius: 50%; content: ""; }
+    .project-visual::before { width: 230px; height: 230px; top: -110px; right: -48px; }
+    .project-visual::after { width: 150px; height: 150px; top: -72px; right: -8px; }
+    .project-visual.totalbuild { background: #e9ece4; }
+    .project-visual.manna { background: #edf0e8; }
+    .project-visual.ai { background: #e8eeeb; }
+    .project-visual.reward { background: #eeeee8; }
+    .project-kicker { position: relative; z-index: 1; color: var(--sage-dark); font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .project-body { display: flex; flex: 1; flex-direction: column; padding: 24px 25px 25px; }
+    .project-body h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 23px; font-weight: 400; }
+    .project-body p { margin-bottom: 14px; font-size: 13px; }
+    .project-meta { margin: auto 0 15px; color: var(--muted); font-size: 11px; line-height: 1.8; }
+    .project-actions { display: flex; flex-wrap: wrap; gap: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .project-actions a { font-size: 11px; }
+    .project-note { margin: 22px 0 0; font-size: 12px; }
+
+    /* Approach and experience */
+    .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 35px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .value-item { padding: 24px 20px 24px 0; }
+    .value-item + .value-item { padding-left: 20px; border-left: 1px solid var(--line); }
+    .value-item h3 { margin: 0 0 8px; font-size: 14px; }
+    .value-item p { margin: 0; font-size: 12px; }
+    .experience-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; }
+    .experience-intro p { max-width: 360px; margin-top: 18px; }
+    .timeline { border-top: 1px solid var(--line); }
+    .role { display: grid; grid-template-columns: 115px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .role-date { padding-top: 4px; color: var(--sage-dark); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .role h3 { margin: 0 0 5px; font-family: var(--serif); font-size: 20px; font-weight: 400; }
+    .role .role-title { margin: 0 0 7px; color: var(--ink); font-size: 12px; font-weight: 700; }
+    .role p { margin: 0; font-size: 13px; }
+    .approach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 34px; }
+    .approach-step { padding-top: 17px; border-top: 1px solid var(--line); }
+    .approach-step span { color: var(--sage); font-family: var(--serif); font-size: 25px; }
+    .approach-step h3 { margin: 10px 0 6px; font-size: 14px; }
+    .approach-step p { margin: 0; font-size: 12px; }
+
+    /* Contact/footer */
+    .contact-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 45px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
+    .contact-panel h2 { max-width: 500px; margin-bottom: 15px; }
+    .contact-panel p { max-width: 440px; font-size: 14px; }
+    .consultation-offer { display: grid; gap: 4px; max-width: 390px; margin-top: 19px; padding: 13px 15px; border-left: 2px solid var(--sage); background: var(--sage-pale); }
+    .consultation-offer strong { color: var(--ink); font-size: 12px; }
+    .consultation-offer span { color: var(--muted); font-size: 11px; line-height: 1.6; }
+    .contact-details { display: grid; grid-template-columns: 1fr 1fr; gap: 23px 18px; }
+    .contact-item span { display: block; margin-bottom: 7px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .contact-item a, .contact-item strong { font-size: 12px; font-weight: 600; overflow-wrap: anywhere; }
+    .contact-item a:hover { color: var(--sage-dark); text-decoration: underline; text-underline-offset: 3px; }
+    footer { padding: 38px 0 26px; }
+    .footer-top { display: flex; align-items: start; justify-content: space-between; gap: 35px; padding-bottom: 27px; border-bottom: 1px solid var(--line); }
+    .footer-description { max-width: 270px; margin: 13px 0 0; font-size: 12px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 13px 22px; }
+    .footer-links a { color: var(--muted); font-size: 11px; }
+    .footer-links a:hover { color: var(--sage-dark); }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 18px; padding-top: 17px; color: var(--muted); font-size: 10px; }
+
+    /* Read-aloud controls */
+    .audio-controls { position: fixed; right: 18px; bottom: 18px; z-index: 50; display: flex; flex-wrap: wrap; align-items: center; gap: 7px; max-width: calc(100% - 36px); padding: 9px; border: 1px solid var(--line); background: rgba(255,255,255,.97); box-shadow: 0 8px 28px rgba(32,37,31,.12); }
+    .audio-controls button { min-height: 36px; padding: 0 12px; border: 0; background: var(--sage-dark); color: #fff; font-size: 11px; font-weight: 700; cursor: pointer; }
+    .audio-controls button.secondary { border: 1px solid var(--line); background: transparent; color: var(--ink); }
+    .audio-controls button:focus-visible, .audio-controls input:focus-visible { outline: 2px solid var(--sage-dark); outline-offset: 3px; }
+    .auto-read { display: inline-flex; align-items: center; gap: 6px; padding: 0 5px; color: var(--muted); font-size: 10px; white-space: nowrap; }
+    .auto-read input { accent-color: var(--sage-dark); }
+    .read-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    @media (max-width: 940px) {
+      .nav-links { gap: 13px; }
+      .nav-links a { font-size: 10px; }
+      .nav-cta { display: none; }
+      .hero-grid { gap: 42px; }
+      .portrait-frame, .portrait-frame img { min-height: 420px; height: 420px; }
+      .about-grid, .experience-grid { gap: 42px; }
+      .contact-panel { padding: 34px; }
+    }
+    @media (max-width: 700px) {
+      .wrap { width: calc(100% - 38px); }
+      .site-header { height: 68px; }
+      .nav-links, .nav > .nav-cta { display: none; }
+      .menu-toggle { display: block; }
+      .mobile-nav { position: absolute; top: 68px; right: 0; left: 0; display: none; padding: 10px 20px 18px; border-bottom: 1px solid var(--line); background: var(--paper); }
+      .mobile-nav.open { display: grid; }
+      .mobile-nav a { padding: 13px 0; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 12px; font-weight: 600; }
+      .hero { padding: 35px 0 58px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+      .portrait-frame, .portrait-frame img { min-height: 360px; height: 360px; }
+      .portrait-frame { order: -1; }
+      .hero-copy .lead { font-size: 15px; }
+      .hero-tags { gap: 8px 13px; }
+      .section { padding: 62px 0; }
+      .section-head { display: block; margin-bottom: 27px; }
+      .section-head > p { margin-top: 13px; }
+      .about-grid, .experience-grid { grid-template-columns: 1fr; gap: 30px; }
+      .capability-grid, .project-grid { grid-template-columns: 1fr; }
+      .capability-card { min-height: 0; padding: 23px; }
+      .project-visual { min-height: 150px; }
+      .value-grid { grid-template-columns: 1fr 1fr; }
+      .value-item { padding: 20px 14px 20px 0; }
+      .value-item + .value-item { padding-left: 14px; }
+      .value-item:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+      .value-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .approach-grid { grid-template-columns: 1fr 1fr; gap: 24px 17px; }
+      .role { grid-template-columns: 90px 1fr; gap: 12px; }
+      .contact-panel { grid-template-columns: 1fr; gap: 28px; padding: 26px 22px; }
+      .contact-details { gap: 18px 12px; }
+      .footer-top { display: block; }
+      .footer-links { margin-top: 24px; }
+      .footer-bottom { display: block; line-height: 1.9; }
+      .audio-controls { right: 10px; bottom: 10px; gap: 5px; padding: 7px; }
+      .audio-controls button { min-height: 34px; padding-inline: 10px; }
+      .auto-read { font-size: 9px; }
+    }
+    @media (max-width: 390px) {
+      .brand-name { font-size: 10px; }
+      .brand-name small { font-size: 8px; }
+      .hero-actions .btn { width: 100%; }
+      .contact-details { grid-template-columns: 1fr; }
+      .audio-controls { left: 10px; right: 10px; justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
 </head>
 <body>
-<div class="read-aloud" role="group" aria-label="Website audio controls">
- <button type="button" id="listenButton" aria-label="Read this website aloud">▶ Listen</button>
- <button type="button" id="stopButton" class="secondary" aria-label="Stop reading aloud">■ Stop</button>
- <span class="read-status" id="readStatus" aria-live="polite"></span>
-</div>
-<header>
- <div class="wrap nav">
-  <a class="brand" href="#home" aria-label="Taiwo Iwaloga home">
-   <span class="brand-mark"><span>T</span></span>
-   <span class="brand-name">Taiwo Iwaloga<small>Business • Technology • Growth</small></span>
-  </a>
-  <nav class="navlinks" aria-label="Main navigation">
-   <a href="#home">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Approach</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
-  </nav>
-  <a class="btn" href="#contact">Let's talk <span>→</span></a>
-  <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Open navigation">☰</button>
- </div>
- <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-  <a href="#home">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Approach</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
- </nav>
-</header>
-
-<main>
-<section class="hero" id="home">
- <div class="wrap hero-grid">
-  <div class="hero-copy">
-   <p class="eyebrow">Business development • Digital innovation</p>
-   <h1>I connect ideas, people and <em>business opportunities.</em></h1>
-   <p>I work across sales, business development, technology and entrepreneurship — turning needs into practical solutions, building relationships and helping ideas move from concept to execution.</p>
-   <div class="actions">
-    <a class="btn" href="#work">Explore my work <span>→</span></a>
-    <a class="btn outline" href="#contact">Let's work together <span>→</span></a>
-   </div>
-   <div class="hero-note">Sales strategy · AI & digital solutions · Operations · Entrepreneurship</div>
+  <div class="audio-controls" role="group" aria-label="Website read-aloud controls">
+    <button type="button" id="listenButton">▶ Listen</button>
+    <button type="button" id="stopButton" class="secondary">■ Stop</button>
+    <label class="auto-read"><input type="checkbox" id="autoReadToggle"> Auto-read on load</label>
+    <span class="read-status" id="readStatus" aria-live="polite"></span>
   </div>
-  <div class="hero-visual" id="heroVisual">
-   <img id="portrait" src="https://i.ibb.co/Q7HMQjnS/1794396473541.jpg" alt="Professional black-and-white portrait of Taiwo Iwaloga wearing glasses and a light blazer">
-   <div class="visual-label">Strategy + Technology<br>Human + Impact</div>
-  </div>
- </div>
-</section>
 
-<section class="section" id="about">
- <div class="wrap">
-  <div class="section-head">
-   <div><p class="eyebrow">A multidisciplinary professional</p><h2>Business thinking meets practical execution.</h2></div>
-   <p>My work sits at the intersection of commercial growth, technology and getting things done.</p>
-  </div>
-  <div class="experience-grid">
-   <div class="experience-intro">
-    <p>I am a business development and operations professional with experience spanning sales, real estate, automotive, logistics, construction supplies, food business and digital technology.</p>
-    <p>Alongside commercial work, I explore AI tools, prompt engineering and web-based solutions to make business processes more useful, accessible and efficient.</p>
-   </div>
-   <div class="timeline">
-    <div class="role"><span class="role-date">Focus 01</span><div><h3>Commercial Growth</h3><p>Sales, prospecting, negotiation, partnerships and client relationships.</p></div></div>
-    <div class="role"><span class="role-date">Focus 02</span><div><h3>Technology & AI</h3><p>AI prompting, workflow thinking, digital products and practical web solutions.</p></div></div>
-    <div class="role"><span class="role-date">Focus 03</span><div><h3>Business Operations</h3><p>Project coordination, logistics, procurement and execution across business functions.</p></div></div>
-   </div>
-  </div>
- </div>
-</section>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Taiwo Iwaloga home">
+        <span class="brand-mark">T</span>
+        <span class="brand-name">Taiwo Iwaloga<small>Business Administrator • Operations • AI Solutions</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="btn nav-cta" href="#contact">Let's talk <span>→</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<section class="section" id="work">
- <div class="wrap">
-  <div class="section-head">
-   <div><p class="eyebrow">Selected ventures & projects</p><h2>Work shaped by real business needs.</h2></div>
-   <p>A selection of business initiatives and digital work across different industries.</p>
-  </div>
-  <div class="projects">
-   <article class="project"><div class="project-art manna"><div class="art-title">Food that<br>supports life.</div><span class="art-caption">Food • Wellness • Hospitality</span></div><div class="project-info"><div><h3>MANNA Grab & Go / MANAZO</h3><p>Food business & natural vitality drinks</p></div><span class="arrow">→</span></div></article>
-   <article class="project"><div class="project-art total"><div class="art-title">Build better.<br>Build with confidence.</div><span class="art-caption">Procurement • Construction • Supply</span></div><div class="project-info"><div><h3>TotalBuild Construction Supplies</h3><p>Construction procurement & site supplies</p></div><span class="arrow">→</span></div></article>
-   <article class="project"><div class="project-art ai"><div class="art-title">Make AI<br>work for people.</div><span class="art-caption">AI • Digital products • Productivity</span></div><div class="project-info"><div><h3>AI & Digital Projects</h3><p>Prompt engineering, web concepts & learning products</p></div><span class="arrow">→</span></div></article>
-  </div>
- </div>
-</section>
+  <main id="mainContent">
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Business Administration • Procurement • Commercial Operations</p>
+          <h1>I help organisations <em>organise, grow and move forward.</em></h1>
+          <p class="lead">I am a Business Administrator working across business operations, procurement, sales and AI solutions. I help organisations coordinate resources, strengthen supplier and customer relationships, improve workflows and turn business requirements into practical outcomes.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#work">Explore selected work <span>→</span></a>
+            <a class="btn outline" href="#contact">Let's work together <span>↗</span></a>
+          </div>
+          <div class="hero-tags"><span>Sales & partnerships</span><span>Supply coordination</span><span>Virtual assistance</span><span>AI & digital workflows</span></div>
+        </div>
+        <div class="portrait-frame" id="portraitFrame">
+          <img id="portrait" src="https://i.ibb.co/Q7HMQjnS/1794396473541.jpg" alt="Professional portrait of Taiwo Iwaloga" loading="eager">
+          <div class="portrait-caption">Business Development &amp;<br>Digital Solutions Professional.</div>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="services">
- <div class="wrap">
-  <p class="eyebrow">What I do</p><h2>Areas of capability</h2>
-  <div class="services">
-   <article class="service"><div class="service-icon">↗</div><h3>Sales & Business Development</h3><p>Prospecting, consultative selling, negotiation, partnerships and relationship-led growth.</p></article>
-   <article class="service"><div class="service-icon">⌘</div><h3>AI & Digital Solutions</h3><p>AI prompting, prompt engineering, digital concepts and practical workflow improvement.</p></article>
-   <article class="service"><div class="service-icon">▦</div><h3>Business Operations</h3><p>Project coordination, logistics, procurement and cross-functional execution.</p></article>
-   <article class="service"><div class="service-icon">◇</div><h3>Brand & Commercial Strategy</h3><p>Positioning, customer understanding, value communication and market development.</p></article>
-   <article class="service"><div class="service-icon">✦</div><h3>Virtual Assistance & Sales Support</h3><p>Data entry, administrative support, customer follow-up and high-ticket sales closing.</p></article>
-  </div>
- </div>
-</section>
+    <section class="section section-white" id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">About</p><h2>Practical administration. Commercial thinking. Better execution.</h2></div>
+          <p>I connect people, processes, suppliers and technology to help organisations operate with greater clarity and purpose.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>I am a Business Administrator with experience across business operations, procurement, sales, business development, customer engagement and digital projects. I help organisations translate business needs into structured processes, effective supplier relationships, informed commercial decisions and dependable execution.</p>
+            <p>I enjoy understanding how people, ideas and systems connect, then turning that understanding into something useful.</p>
+            <p>I also develop AI agents for organisations and create digital solutions that can support customer engagement, information handling and everyday business workflows.</p>
+            <blockquote class="about-quote">Organised operations. Strong relationships. Practical technology.</blockquote>
+          </div>
+          <div class="focus-list">
+            <article class="focus-item"><span class="focus-number">01</span><div><h3>Business administration</h3><p>Organising information, coordinating activities, supporting decisions and improving day-to-day business processes.</p></div></article>
+            <article class="focus-item"><span class="focus-number">02</span><div><h3>Procurement & supply</h3><p>Supplier engagement, sourcing, quotation review, material specifications and supply coordination.</p></div></article>
+            <article class="focus-item"><span class="focus-number">03</span><div><h3>AI & digital solutions</h3><p>AI agent development, workflow automation, digital products and customer-focused web experiences.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="band">
- <div class="wrap stats">
-  <div class="stat"><span>Commercial focus</span><strong>Sales</strong><span>Relationships & revenue</span></div>
-  <div class="stat"><span>Technology focus</span><strong>AI</strong><span>Tools & intelligent workflows</span></div>
-  <div class="stat"><span>Execution focus</span><strong>Build</strong><span>Projects & operations</span></div>
-  <div class="stat"><span>Working style</span><strong>End-to-end</strong><span>From idea to delivery</span></div>
- </div>
-</section>
+    <section class="section" id="capabilities">
+      <div class="wrap">
+        <p class="eyebrow">What I can support</p>
+        <h2>Capabilities built around business needs.</h2>
+        <div class="capability-grid">
+          <article class="capability-card">
+            <span class="card-index">01</span>
+            <h3>Business Administration & Operations</h3>
+            <p>Support organisational effectiveness through administrative coordination, information management, process follow-through and practical operational support.</p>
+            <div class="skill-line">Business administration · Operations coordination · Data entry · Documentation · Process improvement</div>
+          </article>
+          <article class="capability-card">
+            <span class="card-index">02</span>
+            <h3>Procurement & Supply Management</h3>
+            <p>Work with clients and suppliers to understand requirements, source suitable products, evaluate quotations and coordinate reliable supply arrangements.</p>
+            <div class="skill-line">Supplier engagement · Sourcing · Quotations · Construction materials · Logistics · Delivery coordination</div>
+          </article>
+          <article class="capability-card">
+            <span class="card-index">03</span>
+            <h3>Sales & Business Development</h3>
+            <p>Develop commercial opportunities through prospecting, customer discovery, relationship management, negotiation and consistent follow-up.</p>
+            <div class="skill-line">Lead generation · Consultative selling · Partnerships · Customer engagement · High-ticket sales support</div>
+          </article>
+          <article class="capability-card">
+            <span class="card-index">04</span>
+            <h3>AI Solutions & Business Automation</h3>
+            <p>Design and develop AI-powered agents and digital workflows that help organisations improve customer engagement, streamline routine tasks and organise information.</p>
+            <div class="skill-line">AI agent development for organisations · Prompt engineering · Workflow automation · AI-assisted customer service · Digital products · Web experiences</div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="experience">
- <div class="wrap experience-grid">
-  <div class="experience-intro"><p class="eyebrow">Professional experience</p><h2>Different industries. One consistent focus: creating value.</h2><p>My experience has developed through customer-facing roles, business initiatives and hands-on project work.</p></div>
-  <div class="timeline">
-   <div class="role"><span class="role-date">Current</span><div><h3>PAC</h3><p>I coordinate the supply of construction materials, helping clients and project teams source the materials they need for their sites.</p></div></div>
-   <div class="role"><span class="role-date">Experience</span><div><h3>SmartyVest Real Estate</h3><p>Property sales, prospect engagement, client needs analysis and relationship management.</p></div></div>
-   <div class="role"><span class="role-date">Experience</span><div><h3>Elizade Toyota</h3><p>Automotive sales, customer engagement and relationship-focused service.</p></div></div>
-   <div class="role"><span class="role-date">Experience</span><div><h3>ITEC Global</h3><p>Business development, sales conversations and technology-related commercial opportunities.</p></div></div>
-   <div class="role"><span class="role-date">Projects</span><div><h3>RivereatAI & I.TEE Concept Global</h3><p>Digital business concepts, AI-enabled ideas, logistics and technology-led initiatives.</p></div></div>
-  </div>
- </div>
-</section>
+    <section class="section section-white" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Selected work & business initiatives</p><h2>Examples of ideas taken into execution.</h2></div>
+          <p>These projects show the kinds of business, customer and digital problems I have worked on. Project links open live pages or prototypes where available.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-visual totalbuild"><img class="project-shot" src="https://image.thum.io/get/width/1200/crop/650/noanimate/https://totalbuildsupplies.lovable.app/" alt="Website preview for TotalBuild Construction Supplies" loading="lazy" onerror="this.style.display='none'"><span class="project-kicker">Construction • Procurement • Supply</span></div>
+            <div class="project-body">
+              <h3>TotalBuild Construction Supplies</h3>
+              <p>A construction procurement business concept focused on helping customers source materials, tools and safety supplies from foundation to finishing.</p>
+              <div class="project-meta"><strong>Contribution:</strong> Business concept, positioning, supply scope and digital storefront development.<br><strong>Focus:</strong> Construction materials, tools, safety wear, plumbing, hardware and electrical supplies.</div>
+              <div class="project-actions"><a class="text-link" href="https://totalbuildsupplies.lovable.app/" target="_blank" rel="noopener">View website ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual manna"><span class="project-kicker">Food • Wellness • Customer experience</span></div>
+            <div class="project-body">
+              <h3>MANNA Grab & Go / MANAZO</h3>
+              <p>A food and natural vitality-drink venture built around freshly prepared meals, customer convenience and a wellness-led brand direction.</p>
+              <div class="project-meta"><strong>Contribution:</strong> Business development, brand direction, menu and product thinking, customer experience and sales-channel development.<br><strong>Extension:</strong> An AI-assisted ordering experience concept.</div>
+              <div class="project-actions"><a class="text-link" href="https://www.instagram.com/manna_grab_go/" target="_blank" rel="noopener">View Instagram ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual ai"><span class="project-kicker">AI • Ordering • Workflow concept</span></div>
+            <div class="project-body">
+              <h3>AI-Assisted Ordering Experience</h3>
+              <p>A prototype concept designed to make food ordering more conversational and accessible, combining menu guidance with a clear order handoff.</p>
+              <div class="project-meta"><strong>Features explored:</strong> Menu interaction, chat assistance, voice input and read-out, WhatsApp order handoff and payment instructions.<br><strong>Status:</strong> Prototype / project concept.</div>
+              <div class="project-actions"><a class="text-link" href="mailto:princetaiwoiwaloga@gmail.com?subject=AI%20Ordering%20Experience">Discuss this project ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual reward"><span class="project-kicker">Website concept • User experience</span></div>
+            <div class="project-body">
+              <h3>Reward Investments Website Concept</h3>
+              <p>A redesigned website concept exploring clearer information hierarchy, simpler navigation and a more direct path for visitors to understand the offering.</p>
+              <div class="project-meta"><strong>Contribution:</strong> Website review, content structure, visual direction and prototype development.<br><strong>Status:</strong> Independent redesign concept, not an official company website.</div>
+              <div class="project-actions"><a class="text-link" href="https://itee-stack.github.io/Reward-wealth-/" target="_blank" rel="noopener">View prototype ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual ai"><img class="project-shot" src="https://image.thum.io/get/width/1200/crop/650/noanimate/https://homezone-ng.github.io/.ng/" alt="Website preview for Home Zone" loading="lazy" onerror="this.style.display='none'"><span class="project-kicker">Home • Digital experience</span></div>
+            <div class="project-body"><h3>Home Zone</h3><p>A digital project focused on presenting a home and property-related offering through an accessible online experience.</p><div class="project-meta"><strong>Focus:</strong> Website experience and digital presentation.</div><div class="project-actions"><a class="text-link" href="https://homezone-ng.github.io/.ng/" target="_blank" rel="noopener">Visit project ↗</a></div></div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual manna"><img class="project-shot" src="https://image.thum.io/get/width/1200/crop/650/noanimate/https://rivereataiafrica.github.io/Order/" alt="Website preview for RiverEat" loading="lazy" onerror="this.style.display='none'"><span class="project-kicker">Food • Ordering • Technology</span></div>
+            <div class="project-body"><h3>RiverEat</h3><p>A food ordering experience designed to connect customers with meal options through a straightforward digital interface.</p><div class="project-meta"><strong>Focus:</strong> Digital ordering and customer experience.</div><div class="project-actions"><a class="text-link" href="https://rivereataiafrica.github.io/Order/" target="_blank" rel="noopener">Visit project ↗</a></div></div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual manna"><img class="project-shot" src="https://image.thum.io/get/width/1200/crop/650/noanimate/https://rivereataiafrica.github.io/a/" alt="Website preview for Food Delivery Platform" loading="lazy" onerror="this.style.display='none'"><span class="project-kicker">Food • Delivery • E-commerce</span></div>
+            <div class="project-body"><h3>Food Delivery Platform</h3><p>A web-based food delivery project built around menu discovery and convenient customer ordering.</p><div class="project-meta"><strong>Focus:</strong> Food delivery and online customer journey.</div><div class="project-actions"><a class="text-link" href="https://rivereataiafrica.github.io/a/" target="_blank" rel="noopener">Visit project ↗</a></div></div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual totalbuild"><img class="project-shot" src="https://image.thum.io/get/width/1200/crop/650/noanimate/https://elmengineeringandprojects-cmyk.github.io/.elm/" alt="Website preview for ELM Engineering" loading="lazy" onerror="this.style.display='none'"><span class="project-kicker">Engineering • Projects</span></div>
+            <div class="project-body"><h3>ELM Engineering</h3><p>A digital presence project for an engineering and projects-focused business.</p><div class="project-meta"><strong>Focus:</strong> Business presentation and online presence.</div><div class="project-actions"><a class="text-link" href="https://elmengineeringandprojects-cmyk.github.io/.elm/" target="_blank" rel="noopener">Visit project ↗</a></div></div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual reward"><img class="project-shot" src="https://image.thum.io/get/width/1200/crop/650/noanimate/https://houseoftiwaj.github.io/J/" alt="Website preview for House of Tiwaj" loading="lazy" onerror="this.style.display='none'"><span class="project-kicker">Fashion • Brand experience</span></div>
+            <div class="project-body"><h3>House of Tiwaj</h3><p>A fashion house website project presenting a brand and its products through a dedicated online experience.</p><div class="project-meta"><strong>Focus:</strong> Fashion brand presentation and digital experience.</div><div class="project-actions"><a class="text-link" href="https://houseoftiwaj.github.io/J/" target="_blank" rel="noopener">Visit project ↗</a></div></div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual ai"><img class="project-shot" src="https://image.thum.io/get/width/1200/crop/650/noanimate/https://itec-glitch.github.io/Driving-/" alt="Website preview for Digital Driving Manual" loading="lazy" onerror="this.style.display='none'"><span class="project-kicker">Digital learning • Publishing</span></div>
+            <div class="project-body"><h3>Digital Driving Manual</h3><p>An online driving education resource that makes driving guidance available in a digital manual format.</p><div class="project-meta"><strong>Focus:</strong> Digital learning content and information access.</div><div class="project-actions"><a class="text-link" href="https://itec-glitch.github.io/Driving-/" target="_blank" rel="noopener">Read manual ↗</a></div></div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual totalbuild"><img class="project-shot" src="https://image.thum.io/get/width/1200/crop/650/noanimate/https://itec-glitch.github.io/elizade-toyota-ai/" alt="Website preview for Elizade Toyota AI" loading="lazy" onerror="this.style.display='none'"><span class="project-kicker">Automotive • Digital solutions</span></div>
+            <div class="project-body"><h3>Elizade Toyota AI</h3><p>An automotive company website concept incorporating an AI-enabled customer interaction experience.</p><div class="project-meta"><strong>Focus:</strong> Automotive information and AI-assisted customer experience.</div><div class="project-actions"><a class="text-link" href="https://itec-glitch.github.io/elizade-toyota-ai/" target="_blank" rel="noopener">Visit project ↗</a></div></div>
+          </article>
+        </div>
+        <p class="project-note">Selected business initiatives, website builds and digital concepts. Open each project to explore the live experience; prototypes and independent concepts are identified where relevant.</p>
+      </div>
+    </section>
 
-<section class="section capabilities">
- <div class="wrap">
-  <p class="eyebrow">Core capabilities</p><h2>A practical mix of commercial and technical skills.</h2>
-  <div class="cap-grid">
-   <div class="cap"><h3>Sales & Growth</h3><ul><li>Consultative selling</li><li>Lead generation</li><li>Prospecting & qualification</li><li>Negotiation & closing</li><li>Client retention</li></ul></div>
-   <div class="cap"><h3>Business Development</h3><ul><li>Market research</li><li>Partnership development</li><li>Opportunity identification</li><li>Value proposition</li><li>Strategic networking</li></ul></div>
-   <div class="cap"><h3>Technology & AI</h3><ul><li>AI prompting</li><li>Prompt engineering</li><li>AI-assisted workflows</li><li>Digital product thinking</li></ul></div>
-   <div class="cap"><h3>Operations</h3><ul><li>Project coordination</li><li>Construction materials supply</li><li>Logistics & supply chain</li><li>Procurement</li><li>Business operations</li></ul></div>
-   <div class="cap"><h3>Virtual Assistance & Sales</h3><ul><li>Data entry</li><li>Administrative support</li><li>Customer communication</li><li>Lead follow-up</li><li>High-ticket closing</li></ul></div>
-  </div>
- </div>
-</section>
+    <section class="section section-white" id="experience">
+      <div class="wrap experience-grid">
+        <div class="experience-intro">
+          <p class="eyebrow">Professional experience</p>
+          <h2>Business administration across commercial and operational functions.</h2>
+          <p>My experience brings together business administration, procurement partnerships, sales, supplier relationships and the development of practical digital solutions.</p>
+        </div>
+        <div class="timeline">
+          <article class="role">
+            <span class="role-date">Professional experience</span>
+            <div><h3>ELM Engineering & Projects</h3><p class="role-title">Procurement & Supply Partner</p><p>Work with clients and suppliers as a procurement partner, translating project requirements into practical sourcing and supply arrangements. Identify suitable construction materials, engage suppliers, compare quotations, consider specifications, pricing and availability, and coordinate supply to align with project budgets and delivery schedules.</p></div>
+          </article>
+          <article class="role">
+            <span class="role-date">Experience</span>
+            <div><h3>SmartyVest Real Estate</h3><p class="role-title">Real Estate Sales & Client Engagement</p><p>Experience with property sales, prospect engagement, understanding client needs and relationship management.</p></div>
+          </article>
+          <article class="role">
+            <span class="role-date">Experience</span>
+            <div><h3>ITEC Global</h3><p class="role-title">Business Development & Technology-Related Opportunities</p><p>Business development, sales conversations and work around technology-led commercial opportunities.</p></div>
+          </article>
+          <article class="role">
+            <span class="role-date">Projects</span>
+            <div><h3>RivereatAI & I.TEE Concept Global</h3><p class="role-title">Digital Business & AI Concepts</p><p>Exploration and development of digital business concepts, AI-enabled ideas, logistics and technology-led initiatives.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="process">
- <div class="wrap">
-  <p class="eyebrow">How I work</p><h2>From understanding to execution.</h2>
-  <div class="process">
-   <article class="step"><span class="step-num">01</span><h3>Discover</h3><p>Understand the goal, people, constraints and business need.</p></article>
-   <article class="step"><span class="step-num">02</span><h3>Define</h3><p>Clarify the opportunity and identify a practical direction.</p></article>
-   <article class="step"><span class="step-num">03</span><h3>Develop</h3><p>Build the relationship, solution, workflow or delivery plan.</p></article>
-   <article class="step"><span class="step-num">04</span><h3>Deliver</h3><p>Execute, communicate, review and improve the outcome.</p></article>
-  </div>
- </div>
-</section>
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Working approach</p>
+        <h2>From understanding to useful action.</h2>
+        <div class="approach-grid">
+          <article class="approach-step"><span>01</span><h3>Discover</h3><p>Understand the goal, people, constraints and business need.</p></article>
+          <article class="approach-step"><span>02</span><h3>Define</h3><p>Clarify priorities and agree on a practical direction.</p></article>
+          <article class="approach-step"><span>03</span><h3>Coordinate</h3><p>Organise communication, tasks, resources and follow-up.</p></article>
+          <article class="approach-step"><span>04</span><h3>Deliver</h3><p>Follow through, review progress and improve the outcome.</p></article>
+        </div>
+      </div>
+    </section>
 
-<section class="quote-band">
- <div class="wrap quote-layout">
-  <div><p class="eyebrow">Guiding principle</p><h2>Purposeful work.<br>Practical impact.</h2></div>
-  <div class="quote">“I enjoy understanding how people, ideas and systems connect, then turning that understanding into something useful.”<small>Taiwo Iwaloga</small></div>
- </div>
-</section>
+    <section class="section section-white" id="contact">
+      <div class="wrap contact-panel">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let's discuss the work you need to move forward.</h2>
+          <p>I'm open to opportunities in business administration, procurement, operations, sales, business development and AI-enabled business solutions.</p>
+          <a class="btn" href="mailto:princetaiwoiwaloga@gmail.com">Start a conversation <span>→</span></a>
+          <div class="consultation-offer"><strong>Complimentary business consultation</strong><span>Free offer for selected first-time engagements.</span></div>
+        </div>
+        <div class="contact-details">
+          <div class="contact-item"><span>Email</span><a href="mailto:princetaiwoiwaloga@gmail.com">princetaiwoiwaloga@gmail.com</a></div>
+          <div class="contact-item"><span>Phone / WhatsApp</span><a href="https://wa.me/2348132115139" target="_blank" rel="noopener">+234 813 211 5139</a></div>
+          <div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/iwaloga-delight-taiwo-376743238" target="_blank" rel="noopener">View professional profile ↗</a></div>
+          <div class="contact-item"><span>Location</span><strong>Lagos, Nigeria</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<section class="section" id="contact">
- <div class="wrap contact-panel">
-  <div><p class="eyebrow">Let's create something meaningful</p><h2>Have an opportunity in mind?</h2><p>I'm open to conversations around sales, business development, commercial partnerships, technology and operations.</p><a class="btn" href="mailto:princetaiwoiwaloga@gmail.com">Start a conversation <span>→</span></a></div>
-  <div class="contact-details">
-   <div class="contact-item"><span>Email</span><a href="mailto:princetaiwoiwaloga@gmail.com">princetaiwoiwaloga@gmail.com</a></div>
-   <div class="contact-item"><span>Phone / WhatsApp</span><a href="https://wa.me/2348132115139" target="_blank" rel="noopener">+234 813 211 5139</a></div>
-   <div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/iwaloga-delight-taiwo-376743238" target="_blank" rel="noopener">View professional profile →</a></div>
-   <div class="contact-item"><span>Location</span><strong>Lagos, Nigeria</strong></div>
-  </div>
- </div>
-</section>
-</main>
+  <footer>
+    <div class="wrap">
+      <div class="footer-bottom"><span>© 2026 Taiwo Iwaloga. All rights reserved.</span><span>Business Administrator · Procurement · AI & Digital Solutions</span></div>
+    </div>
+  </footer>
 
-<footer>
- <div class="wrap">
-  <div class="footer-top">
-   <div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark"><span>T</span></span><span class="brand-name">Taiwo Iwaloga<small>Business • Technology • Growth</small></span></a><p style="max-width:230px;margin-top:15px">Connecting people, ideas and practical business solutions.</p></div>
-   <div class="footer-col"><h4>Navigation</h4><a href="#about">About</a><a href="#work">Selected work</a><a href="#services">Capabilities</a><a href="#experience">Experience</a></div>
-   <div class="footer-col"><h4>Focus areas</h4><a href="#services">Business development</a><a href="#services">AI & digital</a><a href="#services">Operations</a><a href="#services">Commercial strategy</a></div>
-   <div class="footer-col"><h4>Connect</h4><a href="mailto:princetaiwoiwaloga@gmail.com">Email</a><a href="https://wa.me/2348132115139">WhatsApp</a><a href="https://www.linkedin.com/in/iwaloga-delight-taiwo-376743238" target="_blank" rel="noopener">LinkedIn</a></div>
-  </div>
-  <div class="footer-bottom"><span>© 2026 Taiwo Iwaloga. All rights reserved.</span><span>Business Development · Digital Innovation · Entrepreneurship</span></div>
- </div>
-</footer>
-<script>
-const menuButton=document.getElementById('menuToggle');
-const mobileNav=document.getElementById('mobileNav');
-menuButton.addEventListener('click',()=>{
-  const open=mobileNav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded',String(open));
-  menuButton.textContent=open?'✕':'☰';
-});
-mobileNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
-  mobileNav.classList.remove('open');
-  menuButton.setAttribute('aria-expanded','false');
-  menuButton.textContent='☰';
-}));
-const portrait=document.getElementById('portrait');
-portrait.addEventListener('load',()=>document.getElementById('heroVisual').classList.add('has-photo'));
+  <script>
+    // Mobile navigation
+    const menuButton = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    menuButton.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      menuButton.textContent = isOpen ? '✕' : '☰';
+    });
+    mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation');
+      menuButton.textContent = '☰';
+    }));
 
-// Read the portfolio aloud when the page opens. Some browsers require a user
-// gesture before allowing speech, so the Listen button remains available.
-const listenButton=document.getElementById('listenButton');
-const stopButton=document.getElementById('stopButton');
-const readStatus=document.getElementById('readStatus');
-let speechChunks=[];
-let speechIndex=0;
-let hasStartedReading=false;
+    // Portrait fallback if the external image host is unavailable.
+    const portrait = document.getElementById('portrait');
+    portrait.addEventListener('error', () => {
+      portrait.style.display = 'none';
+      document.getElementById('portraitFrame').style.background = 'linear-gradient(145deg, #e7ebe4, #cfd8ce)';
+    });
 
-function getPortfolioText(){
-  const main=document.querySelector('main');
-  return main.innerText.replace(/\s+/g,' ').trim();
-}
-function speakNextChunk(){
-  if(speechIndex>=speechChunks.length){
-    readStatus.textContent='Finished reading in Canadian English.';
-    listenButton.textContent='↻ Listen again';
-    hasStartedReading=false;
-    return;
-  }
-  const utterance=new SpeechSynthesisUtterance(speechChunks[speechIndex++]);
-  utterance.lang='en-CA';
-  utterance.rate=0.96;
-  utterance.pitch=1;
-  // Prefer a Canadian English voice when the browser provides one.
-  const canadianVoice=window.speechSynthesis.getVoices().find(voice=>voice.lang && voice.lang.toLowerCase().startsWith('en-ca'));
-  if(canadianVoice) utterance.voice=canadianVoice;
-  utterance.onend=speakNextChunk;
-  utterance.onerror=()=>{
-    readStatus.textContent='Audio could not start. Select Listen to try again.';
-    listenButton.textContent='▶ Listen';
-    hasStartedReading=false;
-  };
-  window.speechSynthesis.speak(utterance);
-}
-function startReading(){
-  if(!('speechSynthesis' in window)){
-    readStatus.textContent='Read aloud is not supported by this browser.';
-    return;
-  }
-  window.speechSynthesis.cancel();
-  const text=getPortfolioText();
-  // Keep utterances at a manageable length for mobile browser speech engines.
-  speechChunks=text.match(/[\s\S]{1,1800}(?:\s|$)/g)||[text];
-  speechIndex=0;
-  hasStartedReading=true;
-  listenButton.textContent='▶ Reading…';
-  readStatus.textContent='Reading aloud in Canadian English.';
-  speakNextChunk();
-}
-listenButton.addEventListener('click',startReading);
-stopButton.addEventListener('click',()=>{
-  if('speechSynthesis' in window) window.speechSynthesis.cancel();
-  hasStartedReading=false;
-  listenButton.textContent='▶ Listen';
-  readStatus.textContent='Reading stopped.';
-});
-window.addEventListener('load',()=>{
-  // A short delay lets the page finish rendering before narration begins.
-  window.setTimeout(()=>{
-    if(!hasStartedReading) startReading();
-  },900);
-});
-</script>
+    // Canadian English read-aloud. Automatic reading is off by default; visitors can opt in.
+    const listenButton = document.getElementById('listenButton');
+    const stopButton = document.getElementById('stopButton');
+    const autoReadToggle = document.getElementById('autoReadToggle');
+    autoReadToggle.checked = false;
+    localStorage.setItem('taiwoAutoRead', 'false');
+    const readStatus = document.getElementById('readStatus');
+    let speechChunks = [];
+    let speechIndex = 0;
+    let readRequest = 0;
+
+    function getPortfolioText() {
+      return document.getElementById('mainContent').innerText.replace(/\s+/g, ' ').trim();
+    }
+
+    function speakNextChunk(requestId) {
+      if (requestId !== readRequest) return;
+      if (speechIndex >= speechChunks.length) {
+        readStatus.textContent = 'Finished reading in Canadian English.';
+        listenButton.textContent = '↻ Listen again';
+        return;
+      }
+      const utterance = new SpeechSynthesisUtterance(speechChunks[speechIndex++]);
+      utterance.lang = 'en-CA';
+      utterance.rate = 0.96;
+      utterance.pitch = 1;
+      const voices = window.speechSynthesis.getVoices();
+      const canadianVoice = voices.find(voice => voice.lang && voice.lang.toLowerCase().startsWith('en-ca'));
+      if (canadianVoice) utterance.voice = canadianVoice;
+      utterance.onend = () => speakNextChunk(requestId);
+      utterance.onerror = () => {
+        if (requestId !== readRequest) return;
+        readStatus.textContent = 'Your browser could not start the audio. Press Listen to try again.';
+        listenButton.textContent = '▶ Listen';
+      };
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function startReading() {
+      if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+        readStatus.textContent = 'Read-aloud is not supported by this browser.';
+        return;
+      }
+      readRequest += 1;
+      const requestId = readRequest;
+      window.speechSynthesis.cancel();
+      const text = getPortfolioText();
+      speechChunks = text.match(/[\s\S]{1,1300}(?:\s|$)/g) || [text];
+      speechIndex = 0;
+      listenButton.textContent = '▶ Reading…';
+      readStatus.textContent = 'Reading aloud in Canadian English.';
+      speakNextChunk(requestId);
+    }
+
+    listenButton.addEventListener('click', startReading);
+    stopButton.addEventListener('click', () => {
+      readRequest += 1;
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      listenButton.textContent = '▶ Listen';
+      readStatus.textContent = 'Reading stopped.';
+    });
+
+    autoReadToggle.addEventListener('change', () => {
+      try { localStorage.setItem('taiwoPortfolioAutoRead', autoReadToggle.checked ? 'on' : 'off'); } catch (error) {}
+      if (!autoReadToggle.checked) {
+        readRequest += 1;
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        listenButton.textContent = '▶ Listen';
+        readStatus.textContent = 'Automatic reading is off.';
+      }
+    });
+
+    window.addEventListener('load', () => {
+      try {
+        const savedPreference = localStorage.getItem('taiwoPortfolioAutoRead');
+        if (savedPreference === 'off') autoReadToggle.checked = false;
+      } catch (error) {}
+      if (autoReadToggle.checked) {
+        window.setTimeout(() => {
+          // Some browsers block speech until a visitor interacts with the page.
+          startReading();
+        }, 1100);
+      }
+    });
+  </script>
 </body>
 </html>
